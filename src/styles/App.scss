@@ -1,0 +1,54 @@
+@import 'variables';
+@import 'mixins';
+
+.header {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  background: lighten($muted, 25%);
+  text-align: center;
+
+  &--logo {
+    margin-bottom: 5px;
+
+    &-link {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &--link {
+    font-size: 13px;
+  }
+}
+
+.main {
+  overflow: hidden;
+  height: 100%;
+}
+
+.sidebar {
+  text-align: center;
+
+  &--search {
+    margin-bottom: 20px;
+  }
+
+  &--results {
+    height: 90%;
+    overflow: auto;
+  }
+
+  &--swatch {
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 100%;
+    background-color: $muted;
+    @include transition(background-color .3s);
+
+    &:hover {
+      background-color: $cool;
+    }
+  }
+}
